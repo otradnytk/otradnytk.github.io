@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano version="1.19">
+
+    
+  <!-- Spot Style - Default Point Spot Style -->
+  <style name="IconDefaultPointSpotStyle"
+         url="%FIRSTXML%/spots/hotspot_image_user_defaultpoint0.png"
+         visible="false"
+         onhover="onhoverIconDefaultPointSpotStyle"
+         onover="onoverIconDefaultPointSpotStyle"
+         onout="onoutIconDefaultPointSpotStyle"
+
+         height="60"
+         width="60"
+         />
+
+  <action name="onhoverIconDefaultPointSpotStyle">
+    showtooltip('hotspot');
+  </action>
+
+  <action name="onoverIconDefaultPointSpotStyle">
+tween(scale, 1.2);
+
+
+  </action>
+
+  <action name="onoutIconDefaultPointSpotStyle">
+    hideTooltip();
+    tween(scale, 1);
+
+
+  </action>
+
+
+
+<!-- ********** -->
+<!-- 18.01.2020 -->
+<!-- id : webVideoViewer -->
+<!-- ********** -->
+
+<ptplugin name="webVideoViewer" engine="kolorBox">
+	<settings>
+		<option name="position" value="center" type="string" />
+		<option name="margin_x" value="0" type="int" />
+		<option name="margin_y" value="0" type="int" />
+		<option name="external_padding" value="15" type="int" />
+		<option name="draggable_box" value="false" type="bool" />
+		<option name="container_auto_size" value="true" type="bool" />
+		<option name="container_width" value="100" type="int" />
+		<option name="container_width_unit" value="percent" type="string" />
+		<option name="container_height" value="100" type="int" />
+		<option name="container_height_unit" value="percent" type="string" />
+		<option name="container_color" value="ffffff" type="string" />
+		<option name="container_alpha" value="0.80000000000000004" type="float" />
+		<option name="container_topleft_border_radius" value="15" type="int" />
+		<option name="container_topright_border_radius" value="15" type="int" />
+		<option name="container_bottomleft_border_radius" value="15" type="int" />
+		<option name="container_bottomright_border_radius" value="15" type="int" />
+		<option name="container_border_width" value="0" type="int" />
+		<option name="container_border_color" value="ffffff" type="string" />
+		<option name="container_border_alpha" value="1" type="float" />
+		<option name="overlay_displayed" value="false" type="bool" />
+		<option name="overlay_color" value="000000" type="string" />
+		<option name="overlay_alpha" value="0.50000762951094835" type="float" />
+
+		<option name="title_displayed" value="true" type="bool" />
+		<option name="title_position" value="top" type="string" />
+		<option name="title_font" value="Comic Sans MS" type="string" />
+		<option name="title_size" value="26" type="int" />
+		<option name="title_weight" value="bold" type="string" />
+		<option name="title_style" value="italic" type="string" />
+		<option name="title_decoration" value="none" type="string" />
+		<option name="title_color" value="000000" type="string" />
+		<option name="caption_displayed" value="false" type="bool" />
+		<option name="video_autoplay" value="false" type="bool" />
+		<option name="fullscreen_displayed" value="true" type="bool" />
+		<option name="fullscreen_position" value="topleft" type="string" />
+		<option name="fullscreen_text" value="webVideoViewerfullscreen_text" type="string" />
+
+
+
+
+		<option name="close_displayed" value="true" type="bool" />
+		<option name="close_position" value="topright" type="string" />
+		<option name="close_text" value="webVideoViewerclose_text" type="string" />
+
+		<option name="close_callback" value="invokeKrFunction('closeKolorBoxCallback_webVideoViewer')" type="string" />
+		<option name="zorder" value="1" type="int" />
+		<option name="use_i18n" value="true" type="bool" />
+	</settings>
+	<internaldata>
+		
+	</internaldata>
+</ptplugin>
+
+<action name="kolorBoxJsReady_webVideoViewer">
+	set(ptplugin[webVideoViewer].jsready, true);
+</action>
+
+<action name="openWebVideo_webVideoViewer">
+	ifnot(ptplugin[webVideoViewer].isOpen,
+		if(ptplugin[webVideoViewer].doNotDeleteMe,
+			set(ptplugin[webVideoViewer].currentCall, false);
+		set(ptplugin[webVideoViewer].isOpen, true);
+		set(ptplugin[webVideoViewer].doNotDeleteMe, false);
+		pauseautorotation(forceplugin);
+
+		
+		getmessage(webVideoViewer_boxurl, %1);
+		js(invokePluginFunction(webVideoViewer, loadSingleArrayItem, get(webVideoViewer_boxurl), %2));
+		,
+			set(ptplugin[webVideoViewer].currentCall, true);
+			set(ptplugin[webVideoViewer].doNotDeleteMe, true);
+			events.dispatch(onremovedisplayedobject);
+			delayedcall(0.3,openWebVideo_webVideoViewer(%1,%2););
+		);
+	,
+		if('%1' != webVideoViewer_boxurl,
+			closeKolorBox_webVideoViewer();
+			delayedcall(0.3,openWebVideo_webVideoViewer(%1,%2););
+		);
+	);
+</action>
+
+<action name="toggleWebVideo_webVideoViewer">
+	js(invokePluginFunction(webVideoViewer, toggleKolorBox, %1));
+</action>
+
+
+<action name="closeKolorBox_webVideoViewer">
+	if(ptplugin[webVideoViewer].doNotDeleteMe,
+		set(ptplugin[webVideoViewer].doNotDeleteMe, false);
+	,
+	js(invokePluginFunction(webVideoViewer, closeKolorBox));
+	);
+</action>
+
+<action name="closeKolorBoxCallback_webVideoViewer">
+	resumeautorotation(forceplugin);
+
+	
+	set(ptplugin[webVideoViewer].doNotDeleteMe, false);
+	set(ptplugin[webVideoViewer].isOpen, false);
+</action>
+
+<action name="changeLanguage_webVideoViewer">
+	if(ptplugin[webVideoViewer].jsready,
+		stopdelayedcall(delay_webVideoViewer);
+		js(invokePluginFunction(webVideoViewer, changeLanguage));
+	,
+		delayedcall(delay_webVideoViewer, 0.1, changeLanguage_webVideoViewer(););
+	);
+</action>
+
+<events name="kolorBoxEvents_webVideoViewer" 
+	keep="true" 
+	onremovepano="if(ptplugin[webVideoViewer].isOpen,closeKolorBox_webVideoViewer(););"
+	onremovedisplayedobject="ifnot(ptplugin[webVideoViewer].currentCall,if(ptplugin[webVideoViewer].isOpen,closeKolorBox_webVideoViewer();););"
+	changetourlanguage="changeLanguage_webVideoViewer();"
+	/>
+
+<!-- ********** -->
+<!-- Simple Button -->
+<!-- id : button -->
+<!-- ********** -->
+
+  <layer name="button"
+         keep="true"
+         url="%FIRSTXML%/graphics/button/hotspot_video.png" 
+         align="topright"
+         x="50"
+         y="50"
+         zorder="2"
+         visible="false"
+         onclick="buttonOnClick"
+         tooltip="buttontooltip"
+         onhover="showTooltip('plugin');"
+         onout="hideTooltip();tween(scale, 1.0,0.5,easeOutQuad);"
+         onover="tween(scale, 1.2,0.5,easeOutQuad);"
+         height="100"
+         width="100"
+         />
+  <action name="buttonOnClick">openWebVideo_webVideoViewer(buttonwebVideoViewer|webVideoViewer|displaywebvideovideo_url, buttonwebVideoViewer|webVideoViewer|displaywebvideovideo_title);
+
+
+  </action>
+
+  <events name="buttonevents" 
+    onTourStart="showbutton();"
+    hidetourcontrols="hidebutton();" 
+    showtourcontrols="showbutton();" 
+    keep="true" />
+  <action name="hidebutton">set(layer[button].visible, false);</action>
+  <action name="showbutton">if(tour_displaycontrols,set(layer[button].visible, true);,hidebutton(););</action>
+
+
+</krpano>
