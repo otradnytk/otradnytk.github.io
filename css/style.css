@@ -40,8 +40,7 @@ h1 {
 	margin: 0 auto;
 }
 
-p {
-	text-align: center;
+
 }
 
 nav {
@@ -82,7 +81,7 @@ nav a {
 }
 
 nav a:hover { 
-	background-color: #000000; 
+	background-color: #579218; 
 }
 
 /* Hide Dropdowns by Default */
