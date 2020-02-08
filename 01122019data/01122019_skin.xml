@@ -54,7 +54,7 @@ tween(scale, 1.2);
          height="80"
          width="80"
          />
-  <action name="buttonOnClick">openurl(http://otradny.tk,_blank);
+  <action name="buttonOnClick">openurl(http://otradny.tk,_self);
 
 
   </action>
