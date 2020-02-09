@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano>
+
+<!-- ************************ -->
+<!--         Messages         -->
+<!-- ************************ -->
+
+  <data name="ru_project_title"><![CDATA[01122019]]></data>
+
+
+
+  <data name="ru_pano407_title"><![CDATA[YI014501.00_05_59_48.Still043]]></data>
+  <data name="ru_spotpoint427_tooltip"><![CDATA[вид сверху]]></data>
+  <data name="ru_spotpoint428_tooltip"><![CDATA[1-я секция]]></data>
+
+
+  <data name="ru_pano389_title"><![CDATA[YI014501.00_00_24_58.Still027]]></data>
+
+
+  <data name="ru_pano390_title"><![CDATA[YI014501.00_00_46_24.Still029]]></data>
+
+
+  <data name="ru_pano391_title"><![CDATA[YI014501.00_01_04_46.Still013]]></data>
+
+
+  <data name="ru_pano392_title"><![CDATA[YI014501.00_01_13_50.Still030]]></data>
+
+
+  <data name="ru_pano393_title"><![CDATA[YI014501.00_02_11_09.Still033]]></data>
+
+
+  <data name="ru_pano394_title"><![CDATA[YI014501.00_02_26_44.Still014]]></data>
+
+
+  <data name="ru_pano395_title"><![CDATA[YI014501.00_02_47_26.Still004]]></data>
+
+
+  <data name="ru_pano396_title"><![CDATA[YI014501.00_03_00_39.Still035]]></data>
+
+
+  <data name="ru_pano397_title"><![CDATA[YI014501.00_03_07_13.Still036]]></data>
+
+
+  <data name="ru_pano398_title"><![CDATA[YI014501.00_03_12_32.Still015]]></data>
+
+
+  <data name="ru_pano399_title"><![CDATA[YI014501.00_03_32_25.Still005]]></data>
+
+
+  <data name="ru_pano400_title"><![CDATA[YI014501.00_03_52_11.Still006]]></data>
+
+
+  <data name="ru_pano401_title"><![CDATA[YI014501.00_04_24_29.Still038]]></data>
+
+
+  <data name="ru_pano402_title"><![CDATA[YI014501.00_04_34_20.Still008]]></data>
+
+
+  <data name="ru_pano403_title"><![CDATA[YI014501.00_05_01_10.Still010]]></data>
+
+
+  <data name="ru_pano404_title"><![CDATA[YI014501.00_05_09_08.Still041]]></data>
+
+
+  <data name="ru_pano405_title"><![CDATA[YI014501.00_05_31_57.Still018]]></data>
+
+
+  <data name="ru_pano406_title"><![CDATA[YI014501.00_05_49_05.Still021]]></data>
+
+
+
+
+
+
+  <data name="ru_buttontooltip"><![CDATA[На главную страницу]]></data>
+  <data name="ru_buttonopenurlwebsiteurl"><![CDATA[http://otradny.tk]]></data>
+
+
+  <data name="ru_vr_setup_hmd0"><![CDATA[SELECT YOUR HMD]]></data>
+  <data name="ru_vr_setup_advanced"><![CDATA[ADVANCED SETTINGS]]></data>
+  <data name="ru_vr_setup_title"><![CDATA[WEB VR SETTINGS]]></data>
+  <data name="ru_vr_setup_dvn1"><![CDATA[Device:]]></data>
+  <data name="ru_vr_setup_siz1"><![CDATA[Screen size:]]></data>
+  <data name="ru_vr_setup_ipd1"><![CDATA[IPD:]]></data>
+  <data name="ru_vr_setup_hmd1"><![CDATA[HMD:]]></data>
+  <data name="ru_vr_setup_hmd3"><![CDATA[Customize]]></data>
+  <data name="ru_vr_setup_cal"><![CDATA[Calibrate gyroscope]]></data>
+  <data name="ru_vr_setup_sav"><![CDATA[SAVE]]></data>
+  <data name="ru_vr_setup_rst"><![CDATA[RESET]]></data>
+  <data name="ru_vr_setup_simple"><![CDATA[SIMPLE]]></data>
+  <data name="ru_vr_setup_cls"><![CDATA[CLOSE]]></data>
+  <data name="ru_vr_setup_m31"><![CDATA[HMD SETTINGS]]></data>
+  <data name="ru_vr_setup_fov1"><![CDATA[FOV:]]></data>
+  <data name="ru_vr_setup_dst1"><![CDATA[Distortion:]]></data>
+  <data name="ru_vr_setup_d2tx"><![CDATA[Distortion 2:]]></data>
+  <data name="ru_vr_setup_vig1"><![CDATA[Vignette:]]></data>
+  <data name="ru_vr_setup_cac1"><![CDATA[Chromatic aberration:]]></data>
+  <data name="ru_vr_setup_olp1"><![CDATA[Overlap:]]></data>
+  <data name="ru_vr_setup_m35"><![CDATA[RETURN]]></data>
+  <data name="ru_vr_setup_cb1"><![CDATA[GYROSCOPE]]></data>
+  <data name="ru_vr_setup_cb2"><![CDATA[Place the device on a flat and[br]stable surface and tab CALIBRATE[br]to correct a gyroscope drifting.]]></data>
+  <data name="ru_vr_setup_cb3"><![CDATA[CALIBRATE]]></data>
+  <data name="ru_vr_setup_cb4"><![CDATA[RESET]]></data>
+  <data name="ru_vr_setup_cb5"><![CDATA[RETURN]]></data>
+  <data name="ru_vr_setup_cb6"><![CDATA[Calibrating...]]></data>
+  <data name="ru_vr_setup_cb7"><![CDATA[Successful calibration]]></data>
+  <data name="ru_vr_setup_cb8"><![CDATA[Calibration failed]]></data>
+  <data name="ru_vr_setup_unavailable"><![CDATA[VR mode[br]is unavailable on your device]]></data>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</krpano>
