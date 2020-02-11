@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano version="1.19">
+
+    
+  <!-- Spot Style - Default Point Spot Style -->
+  <style name="IconDefaultPointSpotStyle"
+         url="%FIRSTXML%/spots/hotspot_image_user_defaultpoint0.png"
+         visible="false"
+         onhover="onhoverIconDefaultPointSpotStyle"
+         onover="onoverIconDefaultPointSpotStyle"
+         onout="onoutIconDefaultPointSpotStyle"
+
+         height="60"
+         width="60"
+         />
+
+  <action name="onhoverIconDefaultPointSpotStyle">
+    showtooltip('hotspot');
+  </action>
+
+  <action name="onoverIconDefaultPointSpotStyle">
+tween(scale, 1.2);
+
+
+  </action>
+
+  <action name="onoutIconDefaultPointSpotStyle">
+    hideTooltip();
+    tween(scale, 1);
+
+
+  </action>
+
+
+
+<!-- ********** -->
+<!-- Simple Button -->
+<!-- id : button -->
+<!-- ********** -->
+
+  <layer name="button"
+         keep="true"
+         url="%FIRSTXML%/graphics/button/inhouse-advertising.jpg.png" 
+         align="topleft"
+         x="50"
+         y="50"
+         zorder="1"
+         visible="false"
+         onclick="buttonOnClick"
+         tooltip="buttontooltip"
+         onhover="showTooltip('plugin');"
+         onout="hideTooltip();tween(scale, 1.0,0.5,easeOutQuad);"
+         onover="tween(scale, 1.2,0.5,easeOutQuad);"
+         height="80"
+         width="80"
+         />
+  <action name="buttonOnClick">openurl(http://otradny.tk,_self);
+
+
+  </action>
+
+  <events name="buttonevents" 
+    onTourStart="showbutton();"
+    hidetourcontrols="hidebutton();" 
+    showtourcontrols="showbutton();" 
+    keep="true" />
+  <action name="hidebutton">set(layer[button].visible, false);</action>
+  <action name="showbutton">if(tour_displaycontrols,set(layer[button].visible, true);,hidebutton(););</action>
+
+
+</krpano>
